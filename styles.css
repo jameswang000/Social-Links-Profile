@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+body {
+  /* 3. Add accessible line-height */
+  line-height: 1.5;
+  /* 4. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 5. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/*
+  9. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+:root {
+  --Green: hsl(75, 94%, 57%);
+  --White: hsl(0, 0%, 100%);
+  --Grey-700: hsl(0, 0%, 20%);
+  --Grey-800: hsl(0, 0%, 12%);
+  --Grey-900: hsl(0, 0%, 8%);
+  --Weight-Light: 400;
+  --Weight-Normal: 600;
+  --Weight-Bold: 700;
+  font-size: 14px;
+  font-family: "Inter", serif;
+}
+
+body {
+  background-color: var(--Grey-900);
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 21rem;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
+  background-color: var(--Grey-800);
+}
+
+.card-profile-picture {
+  border-radius: 50%;
+  width: 7rem;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: var(--Weight-Bold);
+  color: var(--White);
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: -10px;
+}
+
+.card-address {
+  font-size: 1rem;
+  font-weight: var(--Weight-Bold);
+  color: var(--Green);
+  text-align: center;
+}
+
+.card-bio {
+  font-size: 1rem;
+  font-weight: var(--Weight-Light);
+  color: var(--White);
+  text-align: center;
+}
+
+.card-link {
+  padding: 0.7rem;
+  border-radius: 5px;
+  width: 100%;
+  text-decoration: none;
+  text-align: center;
+
+  font-size: 1rem;
+  font-weight: var(--Weight-Normal);
+  color: var(--White);
+  background-color: var(--Grey-700);
+}
+
+.card-link:active {
+  color: inherit;
+}
+
+.card-link:hover {
+  background-color: var(--Green);
+  color: var(--Grey-900);
+}
+
+@media (min-width: 1440px) {
+  :root {
+    font-size: 16px; /* Increase base font size for better readability */
+  }
+}
+
+@media (min-width: 1920px) {
+  :root {
+    font-size: 18px; /* Further increase font size for ultra-large screens */
+  }
+}
